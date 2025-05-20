@@ -1,5 +1,5 @@
 import MovieCard from "../components/MovieCard";
-import { usestate } from "react";
+import { useState } from "react";
 
 const Home = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -10,7 +10,11 @@ const Home = () => {
     { id: 3, title: "The Matrix", release_date: "1998" },
   ];
 
-  const handleSearch = () => {};
+  const handleSearch = () => {
+    e.preventDefault();
+    alert(searchQuery);
+    setSearchQuery("");
+  };
 
   return (
     <div className="home">
@@ -19,6 +23,8 @@ const Home = () => {
           className="search-import"
           type="text"
           placeholder="Search for movies..."
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
         />
         <button className="search-button" type="submit">
           Search
