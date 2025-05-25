@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { getPopularMovies, searchMovies } from "../api/movie-requests";
 import MovieCard from "../components/MovieCard";
 import "../css/Home.css";
 
