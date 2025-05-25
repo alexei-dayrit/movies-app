@@ -46,7 +46,7 @@ const Home = () => {
     <div className="home">
       <form className="search-form" onSubmit={handleSearch}>
         <input
-          className="search-import"
+          className="search-input"
           type="text"
           placeholder="Search for movies..."
           value={searchQuery}
