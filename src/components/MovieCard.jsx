@@ -1,6 +1,11 @@
 import "../css/MovieCard.css";
+const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500";
 
 const MovieCard = ({ movie }) => {
+  const imageUrl = movie.poster_path
+    ? `${IMAGE_BASE_URL}${movie.poster_path}`
+    : null;
+
   const onFavoriteClick = () => {
     alert("clicked!");
   };
@@ -8,7 +13,7 @@ const MovieCard = ({ movie }) => {
   return (
     <div className="movie-card">
       <div className="movie-poster">
-        <img src={movie.url} alt={movie.title} />
+        <img src={imageUrl} alt={movie.title} />
         <button className="favorite-btn" onClick={onFavoriteClick}>
           ♥
         </button>
