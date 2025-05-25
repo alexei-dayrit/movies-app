@@ -1,12 +1,75 @@
-# React + Vite
+# 🎬 React Movie Browser
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React application that fetches movies from [The Movie Database (TMDb)](https://www.themoviedb.org/) API. Users can view popular movies, search by title, and manage a list of favorite movies that persist using local storage.
 
-Currently, two official plugins are available:
+## 📁 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Home Page**
+  - Displays popular movies on load
+  - Includes a search bar to look up movies by title
+- **Favorites Page**
+  - Allows users to save and remove favorite movies
+  - Favorites persist even after refreshing the page using `localStorage`
 
-## Expanding the ESLint configuration
+## 🔧 Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- React Router
+- Vite
+- Fetch API
+- LocalStorage API
+- Plain CSS
+
+## 🌐 API
+
+This app uses [The Movie Database API](https://developers.themoviedb.org/3/getting-started/introduction). You need an API key to fetch data.
+
+### Environment Variables
+
+Create a `.env` file in the root of your project and add your TMDb API key:
+
+```env
+VITE_API_KEY=your_api_key_here
+VITE_API_BASE_URL=https://api.themoviedb.org/3
+```
+
+## 🚀 Getting Started
+
+1. Clone the repository:
+
+```shell
+git clone https://github.com/yourusername/react-movie-browser.git
+cd react-movie-browser
+```
+
+2. Install dependencies:
+
+```shell
+npm install
+```
+
+3. Create a .env file and add your TMDb API key
+
+4. Start the development server:
+
+```shell
+npm run dev
+```
+
+5. Build and preview (optional):
+
+```shell
+npm run build && npm run preview
+```
+
+📂 Project Structure (Simplified)
+
+```text
+src/
+├── api/                  # API calls to TMDb
+├── components/           # Reusable components like MovieCard
+├── contexts/             # React Context for favorites
+├── pages/                # Home and Favorites pages
+├── css/                  # CSS stylesheets
+└── main.jsx              # Entry point
+```
