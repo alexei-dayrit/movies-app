@@ -25,3 +25,6 @@ dist-ssr
 
 # Ignore jsconfig.json
 jsconfig.json
+
+# Environment files
+.env
